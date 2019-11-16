@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/svkutyrev/sprint12.git"
+    "url": "git+https://github.com/svkutyrev/sprint13.git"
   },
   "keywords": [
     "maestro"
@@ -19,9 +19,9 @@
   "author": "svkutyrev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/svkutyrev/sprint12/issues"
+    "url": "https://github.com/svkutyrev/sprint13/issues"
   },
-  "homepage": "https://svkutyrev.github.io/sprint12/",
+  "homepage": "https://svkutyrev.github.io/sprint13/",
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
