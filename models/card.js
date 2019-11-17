@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const path = require('path');
+
 const url = /^(http:\/\/|https:\/\/|ftp:\/\/|ftps:\/\/|www\.)([0-9]|[a-z]|[A-Z]|[.*]|[\-]|[\_])+(\.)+([a-z]|.*)/i;
 
 const cardSchema = new mongoose.Schema({
@@ -12,18 +12,13 @@ const cardSchema = new mongoose.Schema({
     link: {
       type: String,
       required: true,
-      validate: {
-        validator: function(v) {
-          return url;
-        },
-        message: props => `${props.value} is not a valid URL!`
-      },
+      match: url,
     },
-    owner: [{
+    owner: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'user',
       required: true,
-    }],
+    },
     likes: [{
       type: mongoose.Schema.Types.ObjectId,
       ref: 'user',
