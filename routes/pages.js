@@ -1,7 +1,7 @@
 const express = require('express');
 const pages = require('express').Router();
 
-pages.get(/^(users||cards)/, (req, res) => {
+pages.get('*', (req, res) => {
   res.statusCode = 404;
   res.json({ "message": "Запрашиваемый ресурс не найден" })
 });
