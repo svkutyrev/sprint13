@@ -14,11 +14,18 @@ module.exports.createUser = (req, res) => {
     .catch(err => res.status(404).send({ message: err.message }))
 };
 
-module.exports.getUser = (req, res) => {
-
+module.exports.getUser = (req, res, err) => {
+  const {_id} = req.user;
   User.findById(req.params.id)
-  .then(user => res.send({ user }))
-  .catch(err => res.status(404).send({ message: err.message }));
+  .then(user => {
+    if(!user){
+      return res.status(404).send({message: 'Такой пользователь не найден'})
+    }
+    else{
+      res.send({ user })
+    }
+  })
+  .catch(err => res.status(404).send({ message: 'юзер не найден' }));
 
 }
 
