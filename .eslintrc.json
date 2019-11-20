@@ -1,7 +1,9 @@
-
 {
-    "extends": "airbnb",
-    "rules": {
-        "allow": [ "_id" ]
-    }
+
+  "extends": [
+    "airbnb-base"
+  ],
+  "rules": {
+    "allow": ["_id", "err"]
+  }
 }
