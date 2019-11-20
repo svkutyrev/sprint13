@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
 const Card = require('../models/card');
 
