@@ -24,7 +24,7 @@ module.exports.getUser = (req, res) => {
         return res.status(404).send({message: 'Такой пользователь не найден'});
       }
       else{
-        res.send({ user })
+        res.send({ user });
       }
     })
     .catch(err => res.status(404).send({ message: 'юзер не найден' }));

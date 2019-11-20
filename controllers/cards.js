@@ -26,7 +26,7 @@ module.exports.deleteCard = (req, res ) => {
         res.status(404).send({ message: 'Карточка не найдена' });
       }
       else{
-        res.send({ data: card })
+        res.send({ data: card });
       }
     })
     .catch(err => res.status(404).send({ message: err.message }));
