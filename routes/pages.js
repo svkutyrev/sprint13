@@ -1,9 +1,8 @@
-const express = require('express');
 const pages = require('express').Router();
 
 pages.get('*', (req, res) => {
   res.statusCode = 404;
-  res.json({ "message": "Запрашиваемый ресурс не найден" })
+  res.json({ message: 'Здесь будет Фронт' });
 });
 
 pages.get('/', (req, res) => {
